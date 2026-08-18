@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="addbtn">add to localstorage</button>
+         <button id="getbtn">get Data from localstorage</button>
+          <button id="addbtn">add to localstorage</button>
+    </div>
+    <script>
+        const studentbiodata={
+            firstname: "siddharth",
+            lastname:"jadhav",
+            age:20,
+            gender:"male",
+            grade:"A",
+            courses:["math","science","english"],
+            address:{
+                street:"123.Main.st",
+                city:"cityville",
+                state:"state",
+                zipcode:"12345",
+            },
+        };
+        const addtodoList=
+        document.getElementById("addbtn").addEventListener("click",()=>{
+            addtodoList();
+        });
+        document.getElementById("getbtn").addEventListener("click",()=>{
+            gettodoList();
+        });
+        document.getElementById("removebtn").addEventListener("click",()=>{
+            gettodoList();
+        });
+
+
+
+       
+    </script>
+    
+</body>
+</html>

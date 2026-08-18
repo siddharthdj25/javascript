@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mouse Event</title>
+
+    <style>
+        .rectangle {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            border: 2px solid black;
+            margin-bottom: 20px;
+
+            /* Makes the change smooth */
+            transition: 1s;
+        }
+
+        .addTransition3 {
+            border-radius: 50%;
+            background-color: #f5ee62;
+            translate: -30rem 0;
+            transform: scale(1.2);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+
+        <div class="rectangle"></div>
+
+        <button id="mybutton">
+            Move Mouse Over Me
+        </button>
+
+    </section>
+
+    <script>
+
+        let button = document.getElementById("mybutton");
+        let rectdiv = document.querySelector(".rectangle");
+
+        const handlemouse = () => {
+            console.log("click");
+
+            rectdiv.style.backgroundColor = "#f5ee62";
+        };
+
+        const handlemouse4 = () => {
+            console.log("mouseover");
+
+            rectdiv.classList.add("addTransition3");
+        };
+        const handlemouse1= () =>{
+            console.log(mousedown);
+            rectdiv.classlist.add()
+        }
+
+        button.addEventListener("click", handlemouse);
+
+        button.addEventListener("mouseover", handlemouse4);
+        button.addEventListener("mousedown" ,handlemouse1);
+
+    </script>
+
+</body>
+</html>

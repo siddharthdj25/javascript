@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Inline Event</h1>
+
+    <button ondblclick="alert('welcome to js')">
+        greeting
+    </button>
+
+    <button onclick="alert('welcome')">
+        greeting again
+    </button>
+
+    <button onmouseover="alert('welcome to js')">
+        greeting
+    </button>
+
+    <h1>DOM Event Handler</h1>
+
+    <button id="mybtn">greeting</button>
+    <button id="mybtn2">greeting again</button>
+
+    <script>
+        document.getElementById('mybtn').onclick = () => {
+            alert('welcome sidd');
+        };
+    </script>
+
+</body>
+</html>
