@@ -26,7 +26,18 @@
                 zipcode:"12345",
             },
         };
-        const addtodoList=
+        const addtodoList=()=>{
+            localStorage.setItem("objectData",JASON.stringify(studentBioData));
+        };
+        const getodoList=()=>{
+           const data= JASON.parse(localStorage.getItem("objectData"));
+           console.log(data);
+        };
+        const removetodolist=()=>{
+            const removedata=localStorage.remove.removeitem("objectData");
+            console.log(removedata);
+        };
+        // const getElementById()
         document.getElementById("addbtn").addEventListener("click",()=>{
             addtodoList();
         });

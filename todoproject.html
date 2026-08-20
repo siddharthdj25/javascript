@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>documnet</title>
+</head>
+
+<body>
+    <h1>todo list </h1>
+    <br/>
+    <form>
+    <div>
+        <input type="text" id="inputValue" />
+        <button class="btn">Add Todo</button>
+    </div>
+
+    <section class="todo-list-elem"> </section>
+</form>
+<script>
+    const maintodoelem= document.querySelector(".todo-list-elem");
+    const inputvalue= document.getElementById("inputValue");
+    const addtodolist= (e)=>{
+        e.preventDefault();//always take object when you are dealing with the form 
+        // 
+        const divelem=document.createElement("div");
+        divelem.classList.add("main_todo_div");
+        divelem.innerHTML=`<li>${inputvalue.value}</li> <button class="deletebtn">DELETE</button>`;
+        maintodoelem.append(divelem);
+
+        
+    }; 
+    document.querySelector(".btn").addEventListener("click",(e)=>{
+        addtodolist(e); 
+    });
+</script>
+     
+    
+</body>
+</html>
