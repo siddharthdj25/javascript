@@ -1,3 +1,2 @@
-const trimstr= text.trim();
-// console.log(trimstr);
-// console.log(trimstr.length);
+const date =new Date("2024-01-05");
+console.log(date);
