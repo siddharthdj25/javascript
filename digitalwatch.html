@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clock</title>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"
+        crossorigin="anonymous"></script>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #3d425b;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 420px;
+        }
+
+        .clockHolder {
+            width: 100%;
+            background: #172326;
+            border: 2px solid #e8e65a;
+            border-radius: 10px;
+            padding: 18px 22px;
+            position: relative;
+        }
+
+        .timeHolder {
+            width: 100%;
+        }
+
+        .timeOptions {
+            display: flex;
+            gap: 28px;
+            margin-bottom: 18px;
+        }
+
+        .timeOptions i {
+            font-size: 20px;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .timeOptions i:hover {
+            color: #e8e65a;
+        }
+
+        .mainDiv {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #clock {
+            width: 100%;
+            text-align: center;
+            font-size: 48px;
+            font-weight: 600;
+            color: #ffffff;
+            letter-spacing: 2px;
+        }
+
+        /* Yellow glowing bar */
+        .clockHolder::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -8px;
+            width: 70%;
+            height: 6px;
+            background: #e8e65a;
+            border-radius: 4px;
+            box-shadow: 0 8px 20px rgba(232, 230, 90, 0.7);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="clockHolder">
+
+            <div class="timeHolder">
+
+                <div class="timeOptions">
+
+                    <i class="fas fa-clock" data-title="Time"></i>
+
+                    <i class="fas fa-stopwatch" data-title="StopWatch"></i>
+
+                    <i class="far fa-clock" data-title="CountDown"></i>
+
+                </div>
+
+                <div class="mainDiv">
+
+                    <p id="clock"></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+    const currentTime = ()=>{
+        const date =new Date();
+        document.getElementById("clock").textContent = date.toLocaleTimeString();
+    }
+    // Call the function immediately to display the initial time
+    currentTime();
+    setInterval(currentTime, 1000);
+    </script>
+
+</body>
+
+</html>
