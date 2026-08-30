@@ -131,7 +131,15 @@
     }
     // Call the function immediately to display the initial time
     currentTime();
-    setInterval(currentTime, 1000);
+   const intervalid= setInterval(currentTime, 1000);
+   const  stopInterval=()=> {
+    clearInterval(intervalid);
+}
+  stopInterval();
+
+setTimeout(stopInterval, 5000);
+
+    
     </script>
 
 </body>
