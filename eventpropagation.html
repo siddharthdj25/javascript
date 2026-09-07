@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #outer {
+        padding: 30px;
+        background: lightblue;
+    }
+
+    #middle {
+        padding: 30px;
+        background: lightgreen;
+    }
+
+    #inner {
+        padding: 30px;
+        background: lightcoral;
+    }
+</style>
+</head>
+<body>
+    <section>
+        <div id="outer">outer
+            <div id ="middle">middle
+                <div id="inner">inner</div>
+            </div>
+        </div>
+        
+    </section>
+    <script>
+        const callouter =(event)=>{
+            console.table([
+                {
+                    Description: "i am the outer div",
+                    Target:event.target,
+                    currentTarget:event.currentTarget,
+                },
+            ]);
+        };
+         const callmiddle =(event)=>{
+            console.table([
+                {
+                    Description: "i am the middle div",
+                    Target:event.target,
+                    currentTarget:event.currentTarget,
+                },
+            ]);
+            event.stopPropagation(); 
+        }; 
+        document.getElementById("outer").addEventListener("click", callouter); 
+
+         document.getElementById("middle").addEventListener("click",callmiddle );
+
+        // document.getElementById("inner").addEventListener("click", function() {
+        //     console.log("Inner div clicked");
+        // });
+    </script>
+    
+</body>
+</html>

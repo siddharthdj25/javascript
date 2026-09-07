@@ -49,6 +49,32 @@ const obj6={name:"sidd"};
 const isEqual=obj5===obj6 ? true:false;
 console.log(isEqual);
 
+const product={
+    id:1,
+    name:"siddharth",
+    price:1000,
+    category:"computers",
+    stock:10,
+    description:"this is the computer product",
+    image:"images will be added during the projects"
+
+};
+let keys=Object.keys(product);
+console.log(keys);
+let values=Object.values(product);
+console.log(values);
+
+
+Object.freeze(product);
+product.id=2;
+console.log(product.id);
+
+ let objA={name:"siddharth",age:20};
+ let obj
+
+
+
+
 
 
 
